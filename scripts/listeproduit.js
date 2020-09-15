@@ -1,5 +1,6 @@
-
+let afftest=document.getElementById("test");
 let tabproduits=[];
+let textbd ="";
 
 class produits{
 constructor(id,name,price,description,imageUrl){
@@ -13,7 +14,11 @@ this.imageUrl=imageUrl;
 }
 
 function recupbd(){
+fetch('http://localhost:3000/api/teddies').then(function(response){
+		response.json().then(function(json){
 	
+		});
+	});
 }
 
 

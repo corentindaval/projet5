@@ -14,25 +14,29 @@ this.imageUrl=imageUrl;
 }
 
 function recupbd(){
-fetch('http://localhost:3000/api/teddies').then(function(response){
+ return new Promise((resolve,reject)=>{
+  fetch('http://localhost:3000/api/teddies').then(function(response){
 		response.json().then(function(json){
-	
+	tabproduits=json;
+	resolve(json);
 		});
 	});
+ });
 }
 
 
 function listeproduits(){
-	recupbd();
+	recupbd().then(function(json){
 	let tab = document.getElementById("affichage");
 		const defcol="<tr><td>image</td><td>nom du produit</td></tr>";
 		let buildtab="";
 		for(let prod of tabproduits){
-			let ligneprod="<tr><td>"+prod.imageUrl+"</td><td class='pprod'id='"+prod.id+"'>"+prod.name+"</td></tr>";
+			let ligneprod="<tr><td><img src='"+prod.imageUrl+"' /></td><td><a href='panier.html?id="+prod._id+"'>"+prod.name+"</a></td></tr>";
 			buildtab=buildtab+ligneprod;
 		}
 		let buildf=defcol+buildtab;
 		tab.innerHTML=buildf;
+	});
 }
 
 if(document.readyState==="complete"){

@@ -1,5 +1,19 @@
-#testlab:hover
-{
-	transform:scale(1.15);
-	opacity:0.8;
+img {
+	height:60px;
+	width:60px;
+}
+
+table {
+	border-bottom-color:black;
+	border-style:solid;
+	border-width:1px;
+}
+
+td {
+	border-bottom-color:black;
+	border-style:solid;
+	border-width:1px;
+	border-left:none;
+	border-right:none;
+	border-top:none;
 }

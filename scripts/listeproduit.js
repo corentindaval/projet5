@@ -31,7 +31,7 @@ function listeproduits(){
 		const defcol="<tr><td>image</td><td>nom du produit</td></tr>";
 		let buildtab="";
 		for(let prod of tabproduits){
-			let ligneprod="<tr><td><img src='"+prod.imageUrl+"' /></td><td><a href='panier.html?id="+prod._id+"'>"+prod.name+"</a></td></tr>";
+			let ligneprod="<tr><td><img src='"+prod.imageUrl+"' /></td><td><a href='produit.html?id="+prod._id+"'>"+prod.name+"</a></td></tr>";
 			buildtab=buildtab+ligneprod;
 		}
 		let buildf=defcol+buildtab;

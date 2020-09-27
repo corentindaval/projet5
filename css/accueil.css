@@ -1,12 +1,27 @@
+body {
+	padding:auto;
+}
 img {
 	height:60px;
-	width:60px;
+	width:80px;
 }
+#logo {
+	height:50px;
+	width:25%;
+	margin-left:50px;
+	margin-right:50px;
+}
+
 
 table {
 	border-bottom-color:black;
 	border-style:solid;
 	border-width:1px;
+	top:75px;
+	margin:auto;
+	height:75%;
+	width:25%;
+	position:relative;
 }
 
 td {
@@ -16,4 +31,33 @@ td {
 	border-left:none;
 	border-right:none;
 	border-top:none;
+}
+
+header {
+	background-color:green;
+	margin-bottom:10px;
+	top:0;
+	width:100%;
+	position:relative;
+	padding-left:auto;
+}
+
+footer {
+	background-color:green;
+	margin-top:10px;
+	bottom:0;
+	width:100%;
+	position:absolute;
+}
+
+@media all and (max-width: 768px) /*mise en place du responsive*/
+{
+table {
+	height:125%;
+	
+}
+#logo {
+	width:50%;
+}
+
 }

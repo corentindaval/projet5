@@ -1,17 +1,40 @@
-body {
-	padding:auto;
-}
+
 img {
 	height:60px;
 	width:80px;
 }
 #logo {
 	height:50px;
+	width:150px;
+}
+nav {
+	margin-left:10px;
+	font-weight:bold;
+
+}
+#lienpanier{
+	margin-left:1500%;
+}
+#erreur{
+	color:red;
+}
+#validercommande{
+	margin-top:60%;
+}
+#affichage{
+	top:75px;
+	margin:auto;
+	height:75%;
 	width:25%;
-	margin-left:50px;
-	margin-right:50px;
+	position:relative;
+	display:flex;
+	flex-direction:column;
 }
 
+#validerpanier{
+margin-top:50%;
+	
+}
 
 table {
 	border-bottom-color:black;
@@ -19,6 +42,7 @@ table {
 	border-width:1px;
 	top:75px;
 	margin:auto;
+	padding:auto;
 	height:75%;
 	width:25%;
 	position:relative;
@@ -34,16 +58,18 @@ td {
 }
 
 header {
-	background-color:green;
+	background-color:cyan;
 	margin-bottom:10px;
 	top:0;
 	width:100%;
 	position:relative;
+	 display:flex;
+    flex-direction:row;
 	padding-left:auto;
 }
 
 footer {
-	background-color:green;
+	background-color:cyan;
 	margin-top:10px;
 	bottom:0;
 	width:100%;
@@ -57,7 +83,10 @@ table {
 	
 }
 #logo {
-	width:50%;
+	width:150px;
+	margin-left:10px;
 }
-
+nav {
+	margin-left:30px;
+}
 }

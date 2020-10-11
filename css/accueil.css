@@ -13,7 +13,7 @@ nav {
 
 }
 #lienpanier{
-	margin-left:1500%;
+	margin-left:1400%;
 }
 #erreur{
 	color:red;
@@ -42,9 +42,11 @@ table {
 	border-width:1px;
 	top:75px;
 	margin:auto;
-	padding:auto;
+	margin-bottom:10%;
+	padding-left:10px;
+	padding-right:10px;
 	height:75%;
-	width:25%;
+	width:15%;
 	position:relative;
 }
 
@@ -55,7 +57,13 @@ td {
 	border-left:none;
 	border-right:none;
 	border-top:none;
+	text-align:center;
+	width:60%;
 }
+tr{
+
+}
+
 
 header {
 	background-color:cyan;
@@ -70,7 +78,6 @@ header {
 
 footer {
 	background-color:cyan;
-	margin-top:10px;
 	bottom:0;
 	width:100%;
 	position:absolute;

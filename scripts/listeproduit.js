@@ -28,7 +28,7 @@ function recupbd(){
 function listeproduits(){
 	recupbd().then(function(json){
 	let tab = document.getElementById("affichage");
-		const defcol="<tr><td>image</td><td>nom du produit</td></tr>";
+		const defcol="<tr><td>Image</td><td>Nom du produit</td></tr>";
 		let buildtab="";
 		for(let prod of tabproduits){
 			let ligneprod="<tr><td><img src='"+prod.imageUrl+"' /></td><td><a href='produit.html?id="+prod._id+"'>"+prod.name+"</a></td></tr>";

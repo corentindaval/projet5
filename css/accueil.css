@@ -3,6 +3,9 @@ img {
 	height:60px;
 	width:80px;
 }
+body{
+	background-color:#CFA75D;
+}
 #logo {
 	height:50px;
 	width:150px;
@@ -12,8 +15,17 @@ nav {
 	font-weight:bold;
 
 }
+
+.fa-shopping-basket
+{
+color:black;
+font-size:30px;
+padding:5px;
+margin-left:10px;
+
+}
 #lienpanier{
-	margin-left:1400%;
+	margin-left:1300%;
 }
 #erreur{
 	color:red;
@@ -25,7 +37,7 @@ nav {
 	top:75px;
 	margin:auto;
 	height:75%;
-	width:25%;
+	width:30%;
 	position:relative;
 	display:flex;
 	flex-direction:column;
@@ -49,6 +61,14 @@ table {
 	width:15%;
 	position:relative;
 }
+.tdpanier{
+	border-bottom-color:black;
+	border-style:solid;
+	border-width:1px;
+	border-top:none;
+	text-align:center;
+		border-left:none;
+}
 
 td {
 	border-bottom-color:black;
@@ -59,6 +79,24 @@ td {
 	border-top:none;
 	text-align:center;
 	width:60%;
+}
+.desc{
+	border-left:none;
+	border-right:none;
+	
+}
+
+#pt {
+	color:red;
+	border-color:black;
+}
+#pu{
+	color:red;
+	border-color:black;
+}
+#apt{
+border-right:none;
+
 }
 tr{
 
@@ -85,9 +123,19 @@ footer {
 
 @media all and (max-width: 768px) /*mise en place du responsive*/
 {
+	body{
+		width:700px;
+		height:700px;
+	}
+header {
+	width:1000px;
+}
+footer {
+	width:1000px;
+}
 table {
-	height:125%;
-	
+	height:50%;
+
 }
 #logo {
 	width:150px;

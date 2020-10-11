@@ -13,6 +13,14 @@ img {
 	
 }
 
+.fa-shopping-basket
+{
+color:black;
+font-size:30px;
+padding:5px;
+margin-left:10px;
+
+}
 header {
 	background-color:orange;
 	margin-bottom:10px;
@@ -57,29 +65,17 @@ body{
 
 @media all and (max-width: 768px) /*mise en place du responsive*/
 {
-body{
-	height:300%;
-	width:300%;
+header {
+	width:700px;
+}
+footer {
+	width:700px;
 }
 table {
 	height:125%;
 	
 }
-#logo {
-	width:150px;
-	margin-left:10px;
-}
-nav {
-	margin-left:30px;
-}
 
-header{
-	width:125%;
-}
-footer{
-	width:300%;
-	margin-top:25%;
-}
 #accueil {
 	margin-right:350px;
 }
@@ -87,6 +83,13 @@ main{
 	margin-top:10%;
 	margin-bottom:10%;
 
+}
+#logo {
+	width:150px;
+	margin-left:10px;
+}
+nav {
+	margin-left:30px;
 }
 
 }

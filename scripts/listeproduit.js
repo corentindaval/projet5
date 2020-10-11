@@ -16,7 +16,7 @@ this.imageUrl=imageUrl;
 function recupbd(){
  return new Promise((resolve,reject)=>{
   fetch('http://localhost:3000/api/teddies').then(function(response){
-		response.json().then(function(json){
+	response.json().then(function(json){
 	tabproduits=json;
 	resolve(json);
 		});

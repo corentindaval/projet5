@@ -2,7 +2,7 @@ const urlparam =new URLSearchParams(window.location.search);
 console.log(urlparam.get("id"));
 let tabproduits=[];
 
-class produits{
+class produits{/*definition de la class produits*/
 constructor(id,name,price,description,imageUrl){
 this.id=id;
 this.name=name;
@@ -13,7 +13,7 @@ this.imageUrl=imageUrl;
 	
 }
 
-function recupproduit(){
+function recupproduit(){/*recuperation des informations du produit*/
 	let build="http://localhost:3000/api/teddies/"+urlparam.get("id");
 	console.log(build);
  return new Promise((resolve,reject)=>{
@@ -26,7 +26,7 @@ function recupproduit(){
  });
 }
 
-function affichageproduit(){
+function affichageproduit(){/*mise en place et affichage des informations du produit*/
 	recupproduit().then(function(json){
 	let tab = document.getElementById("affichage");
 		let buildoption="";
@@ -42,7 +42,7 @@ function affichageproduit(){
 		rbouton.addEventListener('click',resetPanier);
 	});
 }
-function ajouterAuPanier(e){
+function ajouterAuPanier(e){/*ajout d'un exemplaire du produit au panier*/
 	console.log(e.target.dataset.id);
 	let panier=getPanier();
 	let pexist=false;
@@ -58,7 +58,7 @@ function ajouterAuPanier(e){
 	savePanier(panier);
 }
 
-function resetPanier(e){
+function resetPanier(e){/*remise a zero du panier*/
 	viderPanier();
 }
 

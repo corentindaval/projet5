@@ -1,19 +1,20 @@
-body{
+body{/*mise en page disposition*/
 	 display:inline-flex;
 	 flex-direction:column;
+	 background-color:#F4F3DC;
 }
 
-img {
+img {/*mise en page image*/
 	height:300px;
 	width:450px;
 }
-#logo {
+#logo {/*mise en page logo*/
 	height:50px;
 	width:150px;
 	
 }
 
-.fa-shopping-basket
+.fa-shopping-basket/*mise en page "bouton" panier*/
 {
 color:black;
 font-size:30px;
@@ -21,7 +22,7 @@ padding:5px;
 margin-left:10px;
 
 }
-header {
+header {/*mise en page entete*/
 	background-color:orange;
 	margin-bottom:10px;
 	top:0;
@@ -31,34 +32,32 @@ header {
     flex-direction:row;
 	padding-left:auto;
 }
-nav {
+nav {/*mise en page nav*/
 	margin-left:10px;
 }
-#accueil {
+#accueil {/*mise en page acceuil*/
 	margin-right:600px;
 }
-a{
+a{/*mise en page des liens*/
 	margin-left:10px;
 }
-footer {
+footer { /*mise en page pied de page*/
     background-color:orange;
 	margin-top:10px;
 	bottom:0;
 	width:130%;
 	position:relative;
 }
-body{
-	background-color:#F4F3DC;
-}
 
-.mep{
+
+.mep{ /*mise en page*/
 	font-weight:bold;
 }
-#affichage{
+#affichage{/*mise en page affichage*/
 	margin-left:75px;
 	margin-right:75px;
 }
-#ajtpanier{
+#ajtpanier{/*mise en page bouton ajouter au panier*/
 	background-color:#CFA75D;
 	color:black;
 }

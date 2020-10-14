@@ -1,6 +1,6 @@
 
 
-class Contact{
+class Contact{/*definition de la class contact*/
 constructor(firstName,lastName,address,city,email){
 this.firstName=firstName;
 this.lastName=lastName;
@@ -12,7 +12,7 @@ this.email=email;
 }
 
 
-function affichagepanier(){
+function affichagepanier(){/*mise en place et affichage du panier*/
     let panier=getPanier();
 	let tab = document.getElementById("affichage");
 	if(panier==""){
@@ -38,7 +38,7 @@ function affichagepanier(){
 	
 	
 }
-function afficherformulaire(){
+function afficherformulaire(){/*mise en place et affichage du formulaire de contact*/
 	let tab = document.getElementById("affichage");
 	let contenu="<label id='erreur'></label><table><tr><td>Nom  </td><td><input type='textbox' id='nom'></input></td></tr><tr><td>Prenom  </td><td><input type='textbox' id='prenom'></input></td></tr><tr><td>Adresse  </td><td><input type='textbox' id='adresse'></input></td></tr><tr><td>Ville  </td><td><input type='textbox' id='ville'></input></td></tr><tr><td>email  </td><td><input type='email' id='email'></input></td></tr></table><button id='validercommande'>valider</button>";
 	tab.innerHTML=contenu;
@@ -47,7 +47,7 @@ function afficherformulaire(){
 			affichercomfirmation();
 		});
 }
-function affichercomfirmation(){
+function affichercomfirmation(){/*verification et affichage de la confirmation de commande*/
 	let panier=getPanier();
 	let tab = document.getElementById("affichage");
 	let aerreur = document.getElementById("erreur");
@@ -77,7 +77,7 @@ function affichercomfirmation(){
 	
 	
 }
-function submitcommande (contact,products,prixtot){
+function submitcommande (contact,products,prixtot){/*envoi de la commande*/
 	let url="http://localhost:3000/api/teddies/order";
 	const option={
 		method:'POST',
@@ -96,6 +96,7 @@ function submitcommande (contact,products,prixtot){
 	});
  });
 }
+
 if(document.readyState==="complete"){
 	affichagepanier();
 }else{

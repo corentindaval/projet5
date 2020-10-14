@@ -2,7 +2,7 @@ let afftest=document.getElementById("test");
 let tabproduits=[];
 let textbd ="";
 
-class produits{
+class produits{/*definition de la class produits*/
 constructor(id,name,price,description,imageUrl){
 this.id=id;
 this.name=name;
@@ -13,7 +13,7 @@ this.imageUrl=imageUrl;
 	
 }
 
-function recupbd(){
+function recupbd(){/*recuperation de la base de donnée*/
  return new Promise((resolve,reject)=>{
   fetch('http://localhost:3000/api/teddies').then(function(response){
 	response.json().then(function(json){
@@ -25,7 +25,7 @@ function recupbd(){
 }
 
 
-function listeproduits(){
+function listeproduits(){/*mise en place et affichage de la liste des produit*/
 	recupbd().then(function(json){
 	let tab = document.getElementById("affichage");
 		const defcol="<tr><td>Image</td><td>Nom du produit</td></tr>";

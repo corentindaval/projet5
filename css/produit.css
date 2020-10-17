@@ -1,7 +1,6 @@
 body{/*mise en page disposition*/
-	 display:inline-flex;
-	 flex-direction:column;
 	 background-color:#F4F3DC;
+	 margin:auto;
 }
 
 img {/*mise en page image*/
@@ -26,17 +25,17 @@ header {/*mise en page entete*/
 	background-color:orange;
 	margin-bottom:10px;
 	top:0;
-	width:150%;
+	width:100%;
 	position:relative;
     display:flex;
-    flex-direction:row;
+    justify-content:space-between;
 	padding-left:auto;
 }
 nav {/*mise en page nav*/
 	margin-left:10px;
 }
 #accueil {/*mise en page acceuil*/
-	margin-right:600px;
+	left:0;
 }
 a{/*mise en page des liens*/
 	margin-left:10px;
@@ -45,8 +44,8 @@ footer { /*mise en page pied de page*/
     background-color:orange;
 	margin-top:10px;
 	bottom:0;
-	width:130%;
-	position:relative;
+	width:100%;
+	position:absolute;
 }
 
 
@@ -54,8 +53,11 @@ footer { /*mise en page pied de page*/
 	font-weight:bold;
 }
 #affichage{/*mise en page affichage*/
-	margin-left:75px;
-	margin-right:75px;
+	margin:auto;
+	margin-left:10px;
+	padding:auto;
+	top:50px;
+	position:relative;
 }
 #ajtpanier{/*mise en page bouton ajouter au panier*/
 	background-color:#CFA75D;
@@ -64,24 +66,25 @@ footer { /*mise en page pied de page*/
 
 @media all and (max-width: 768px) /*mise en place du responsive*/
 {
-header {
-	width:700px;
-}
-footer {
-	width:700px;
-}
-table {
-	height:125%;
-	
-}
-
+	body{
+		max-width:768px;
+	}
 #accueil {
-	margin-right:350px;
+	margin-right:2px;
+}
+img{
+	width:50%;
+	height:50%;
 }
 main{
-	margin-top:10%;
-	margin-bottom:10%;
+margin:auto;
 
+}
+header {
+	width:100%;
+}
+footer {
+	width:100%;
 }
 #logo {
 	width:150px;

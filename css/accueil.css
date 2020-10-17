@@ -1,22 +1,23 @@
 
-img {
+img {/*mise en page image*/
 	height:60px;
 	width:80px;
 }
-body{
+body{/*mise en page du corps de la page*/
 	background-color:#CFA75D;
+	margin:auto;
 }
-#logo {
+#logo {/*mise en page du logo*/
 	height:50px;
 	width:150px;
 }
-nav {
+nav {/*mise en page de la partie navigation*/
 	margin-left:10px;
 	font-weight:bold;
 
 }
 
-.fa-shopping-basket
+.fa-shopping-basket/*mise en page de l'icone panier*/
 {
 color:black;
 font-size:30px;
@@ -24,44 +25,34 @@ padding:5px;
 margin-left:10px;
 
 }
-#lienpanier{
-	margin-left:1300%;
-}
-#erreur{
+#erreur{/*mise en page de l'affichage des messages d'erreur*/
 	color:red;
 }
-#validercommande{
-	margin-top:60%;
+#validercommande{/*mise en page du bouton de validation de la commande*/
+	margin-top:10px;
+	margin-left:35%;
 }
-#affichage{
-	top:75px;
+#affichage{/*mise en page de la zone d'affichage du script*/
 	margin:auto;
-	height:75%;
-	width:30%;
+	padding:auto;
+	top:50px;
 	position:relative;
-	display:flex;
-	flex-direction:column;
 }
 
-#validerpanier{
-margin-top:50%;
-	
+#validerpanier{/*mise en page du bouton de validation du panier*/
+margin-top:20px;
+margin-left:35%;
 }
 
-table {
+table {/*mise en page des tableau*/
 	border-bottom-color:black;
 	border-style:solid;
 	border-width:1px;
-	top:75px;
 	margin:auto;
-	margin-bottom:10%;
-	padding-left:10px;
-	padding-right:10px;
-	height:75%;
-	width:15%;
+	padding:auto;
 	position:relative;
 }
-.tdpanier{
+.tdpanier{/*mise en page des lignes du tableau panier*/
 	border-bottom-color:black;
 	border-style:solid;
 	border-width:1px;
@@ -70,7 +61,7 @@ table {
 		border-left:none;
 }
 
-td {
+td {/*mise en page des ligne de tableau*/
 	border-bottom-color:black;
 	border-style:solid;
 	border-width:1px;
@@ -80,59 +71,53 @@ td {
 	text-align:center;
 	width:60%;
 }
-.desc{
+.desc{/*mise en page tableau*/
 	border-left:none;
 	border-right:none;
-	
 }
-
-#pt {
+#pt {/*mise en page case prix total du tableau*/
 	color:red;
 	border-color:black;
 }
-#pu{
+#pu{/*mise en page case prix unitaire du tableau*/
 	color:red;
 	border-color:black;
 }
-#apt{
+#apt{/*mise en page bordure case total*/
 border-right:none;
 
 }
 
-header {
+header {/*mise en page de l'entete de la page*/
 	background-color:cyan;
 	margin-bottom:10px;
 	top:0;
 	width:100%;
 	position:relative;
-	 display:flex;
-    flex-direction:row;
+	display:flex;
+    justify-content:space-between;
 	padding-left:auto;
 }
 
-footer {
+footer {/*mise en page du pied de page*/
 	background-color:cyan;
 	bottom:0;
 	width:100%;
 	position:absolute;
 }
 
-@media all and (max-width: 768px) /*mise en place du responsive*/
+@media all and (max-width: 768px) /*mise en place du responsive, pour les écrans avec résolution =inférieure à 768px*/
 {
 	body{
-		width:700px;
-		height:700px;
+		max-width:768px;
 	}
 header {
-	width:1000px;
+	width:100%;
 }
 footer {
-	width:1000px;
+	width:100%;
 }
-table {
-	height:50%;
 
-}
 #logo {
 	width:150px;
 	margin-left:10px;

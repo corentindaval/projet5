@@ -44,6 +44,7 @@ function affichageproduit(){/*mise en place et affichage des informations du pro
 }
 function ajouterAuPanier(e){/*ajout d'un exemplaire du produit au panier*/
 	console.log(e.target.dataset.id);
+	let tab = document.getElementById("affichage");
 	let panier=getPanier();
 	let pexist=false;
 	for(let prod of panier){
@@ -56,6 +57,7 @@ function ajouterAuPanier(e){/*ajout d'un exemplaire du produit au panier*/
 		panier.push({id:e.target.dataset.id,nom:e.target.dataset.name,nombre:1,prix:e.target.dataset.prix});
 	}
 	savePanier(panier);
+	tab.innerHTML+="<label> le produit a bien été ajouter au panier</label>";
 }
 
 function resetPanier(e){/*remise a zero du panier*/

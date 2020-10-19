@@ -16,7 +16,7 @@ function affichagepanier(){/*mise en place et affichage du panier*/
     let panier=getPanier();
 	let tab = document.getElementById("affichage");
 	if(panier==""){
-		let contenu="<p>panier vide</p>";
+		let contenu="<label>Panier vide</label>";
 		tab.innerHTML=contenu;
 	}else{
 		let build="";
@@ -27,10 +27,12 @@ function affichagepanier(){/*mise en place et affichage du panier*/
 			total=total+prixtot;
 			build=build+nvprod;
 		}
-			let contenu="<table><tr><td class='tdpanier' >Nom</td><td class='tdpanier' >Quantité</td><td class='tdpanier'  id='pu'>Prix (unité)</td><td class='tdpanier'  id='pt'>Prix (total)</td></tr>"+build+"<tr><td class='tdpanier' class='desc'>prix</td><td class='tdpanier' class='desc'>total</td><td class='tdpanier' class='desc'>du panier</td><td class='tdpanier' id='apt'>"+total+"</td></tr></table><button id='validerpanier' >valider panier</button>";
+			let contenu="<table id='tpanier'><tr><td class='tdpanier' >Nom</td><td class='tdpanier' >Quantité</td><td class='tdpanier'  id='pu'>Prix (unité)</td><td class='tdpanier'  id='pt'>Prix (total)</td></tr>"+build+"<tr><td class='tdpanier' class='desc'>prix</td><td class='tdpanier' class='desc'>total</td><td class='tdpanier' class='desc'>du panier</td><td class='tdpanier' id='apt'>"+total+"</td></tr></table><button id='validerpanier' >valider panier</button><button id='rstpanier'>reset panier</button>";
 		
 		tab.innerHTML=contenu;
 	}
+     	const rbouton=document.getElementById("rstpanier");
+		rbouton.addEventListener('click',resetPanier);
         const bouton=document.getElementById("validerpanier");
 		bouton.addEventListener('click',function(){
 			afficherformulaire();
@@ -95,6 +97,12 @@ function submitcommande (contact,products,prixtot){/*envoi de la commande*/
 		});
 	});
  });
+}
+
+
+function resetPanier(e){/*remise a zero du panier*/
+	viderPanier();
+	location.reload();
 }
 
 if(document.readyState==="complete"){

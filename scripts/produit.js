@@ -34,7 +34,7 @@ function affichageproduit(){/*mise en place et affichage des informations du pro
 			let nvoption="<option value='"+couleur+"'>"+couleur+"</option>";
 			buildoption=buildoption+nvoption;
 		}
-			let contenu="<img src='"+json.imageUrl+"'/><table><tr><td class='mep'> Nom  </td><td>"+json.name+"</td></tr><tr><td class='mep'> Prix  </td><td>"+json.price+"</td></tr><tr><td class='mep'> Description  </td><td>"+json.description+"</td></tr><tr><td class='mep'> Couleurs  </td><td><select id='selcouleur'>"+buildoption+"</select></td></tr></table><button id='ajtpanier' data-id='"+json._id+"' data-name='"+json.name+"' data-prix='"+json.price+"'>Ajouter au panier</button><button id='rstpanier'>reset panier</button>";
+			let contenu="<img src='"+json.imageUrl+"'/><table><tr><td class='mep'> Nom  </td><td>"+json.name+"</td></tr><tr><td class='mep'> Prix  </td><td>"+json.price+"</td></tr><tr><td class='mep'> Description  </td><td>"+json.description+"</td></tr><tr><td class='mep'> Couleurs  </td><td><select id='selcouleur'>"+buildoption+"</select></td></tr></table><button id='ajtpanier' data-id='"+json._id+"' data-name='"+json.name+"' data-prix='"+json.price+"'>Ajouter au panier</button>";
 		tab.innerHTML=contenu;
 		const bouton=document.getElementById("ajtpanier");
 		bouton.addEventListener('click',ajouterAuPanier);
@@ -57,7 +57,7 @@ function ajouterAuPanier(e){/*ajout d'un exemplaire du produit au panier*/
 		panier.push({id:e.target.dataset.id,nom:e.target.dataset.name,nombre:1,prix:e.target.dataset.prix});
 	}
 	savePanier(panier);
-	tab.innerHTML+="<label> le produit a bien été ajouter au panier</label>";
+	/*tab.innerHTML+="<label> Le produit a bien été ajouté au panier</label>";*/
 }
 
 function resetPanier(e){/*remise a zero du panier*/

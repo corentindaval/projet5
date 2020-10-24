@@ -90,7 +90,7 @@ function submitcommande (contact,products,prixtot){/*envoi de la commande*/
   fetch(url,option).then(function(response){
 		response.json().then(function(json){
 	console.log(json);
-	let affichagecommande="<label>"+json.contact.firstName+" , le numero de la commande est le "+json.orderId+" pour un montant de "+prixtot+" , merci de votre commande.</label>";
+	let affichagecommande="<label id='msg'>"+json.contact.firstName+" , le numero de la commande est le "+json.orderId+" pour un montant de "+prixtot+" , merci de votre commande.</label>";
 	affichage.innerHTML=affichagecommande;
 	viderPanier();
 	resolve(json);
